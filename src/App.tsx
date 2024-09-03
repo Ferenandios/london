@@ -4,7 +4,7 @@ import Form from "./components/Form/Form";
 const App: FC = (): JSX.Element => {
   return (
     <>
-      <div className="bg-lime-300">
+      <div>
         <Form />
       </div>
     </>
