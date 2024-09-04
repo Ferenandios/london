@@ -2,6 +2,7 @@ import { ChangeEvent, FC } from "react";
 import { setEmail, setPassword } from "../../../../features/global.slice";
 import { useAppDispatch, useAppSelector } from "../../../../hooks";
 import { IInput } from "../../../../types/types";
+import styles from "./Input.module.css";
 
 const Input: FC<{ input: IInput }> = ({ input }): JSX.Element => {
   const dispatch = useAppDispatch();
@@ -21,7 +22,7 @@ const Input: FC<{ input: IInput }> = ({ input }): JSX.Element => {
   };
   return (
     <>
-      <div className="flex">
+      <div className={styles.inner}>
         <h3>{input.title}</h3>
         <input
           onChange={(event) => handleChange(event)}
